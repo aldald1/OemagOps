@@ -1,0 +1,32 @@
+﻿@model OemagOps.Models.IncomingRequest
+
+@{
+    ViewData["Title"] = "Neue Anfrage";
+}
+
+<h2>Neue Kundenanfrage</h2>
+
+<form method="post">
+
+    <div class="mb-3">
+        <label class="form-label">Absender</label>
+        <input asp-for="Sender" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Betreff</label>
+        <input asp-for="Subject" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Nachricht</label>
+        <textarea asp-for="Body"
+                  class="form-control"
+                  rows="8"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Anfrage analysieren
+    </button>
+
+</form>
